@@ -30,7 +30,13 @@ std::vector<bool> EvenMask(std::vector<int>);
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums);
+int Sum(std::vector<int> nums){
+    int sum = 0;
+    for(int i = 1; i < nums.size(); i++){
+        sum = sum + nums[i];
+    }
+    return sum;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
@@ -60,14 +66,14 @@ int Factorial(int n) {
 };
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num) {
-	 if (num < 0) {
-		return -1;
-	} else {
-		return 1;  
-   	}
-};
-
+int Sign(int num){
+    if(num > 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
 std::vector<double> MatchVectors(std::vector<double> a, std::vector<double> b);
@@ -124,3 +130,18 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+int Sign(int num){
+    if (num < 0){
+        return -1;
+    }
+    return 1;
+}
+
+int Product(std::vector<int> nums){
+    int prod = 1;
+    for (int i = 0; i < nums.length(); i++){
+        prod = prod * nums[i]
+    }
+    return prod;
+}
