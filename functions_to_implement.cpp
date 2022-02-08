@@ -126,3 +126,18 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+int Sign(int num){
+    if (num < 0){
+        return -1;
+    }
+    return 1;
+}
+
+int Product(std::vector<int> nums){
+    int prod = 1;
+    for (int i = 0; i < nums.length(); i++){
+        prod = prod * nums[i]
+    }
+    return prod;
+}
