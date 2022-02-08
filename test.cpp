@@ -16,3 +16,9 @@ TEST_CASE ( "Factorials are computed", "[factorial]") {
   REQUIRE( Factorial(10) == 3628800 );
 }
 
+TEST_CASE( "Products are computed", "[Product]" ) {
+    REQUIRE( Product(vector<int>{1}}) == 1 );
+    REQUIRE( Product(vector<int>{1,2}) == 2 );
+    REQUIRE( Product(vector<int>{1,2,3} == 6 );
+    REQUIRE( Product(vector<int>{1,2,3,4} == 24 );
+}
